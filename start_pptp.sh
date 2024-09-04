@@ -1,11 +1,7 @@
 #!/bin/bash
 
-# Переменные для настройки PPTP сервера
-USERNAME="your_username"
-PASSWORD="your_password"
-CONTAINER_NAME="pptp-vpn"
+source .env
 
-# Запуск PPTP VPN сервера в контейнере Docker
 docker run -d --privileged \
   --name $CONTAINER_NAME \
   -e USERNAME=$USERNAME \
